@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width">
+	<title>Clint's Paper Airplane Game</title>
+    <script src="libs/phaser.js"></script>
+<!--
+    <script src="Boot.js"></script>
+    <script src="Preloader.js"></script>
+    <script src="StartMenu.js"></script>
+-->
+    <script src="game.js"></script>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #000000;
+		}
+	</style>
+</head>
+<body>
+    <!--
+            game.state.add('Boot', PaperAirplane.Boot);
+            game.state.add('Preloader', PaperAirplane.Preloader);
+            game.state.add('StartMenu', PaperAirplane.StartMenu); 
+            game.state.add('Game', PaperAirplane.Game);
+            game.state.start('Game'); -->
+    
+    <div id="gameContainer"></div>
+    <script type="text/javascript">
+        window.onload = function() {
+            var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS, 'gameContainer');
+            game.state.add('Game', PaperAirplane.Game);
+            game.state.start('Game');
+        }
+    </script>
+</body>
+</html>
