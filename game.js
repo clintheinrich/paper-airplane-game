@@ -149,7 +149,9 @@ function update() {
 
 function render() {
 
-    game.debug.text("Drag the airplane and release to launch, click on the plane to reset   Number of hits: " + hits, 32, 32);
+    game.debug.text("Drag the airplane and release to launch.", 32, 32);
+    game.debug.text("Click or tap on the plane to reset", 32, 52);
+    game.debug.text("Number of hits: " + hits, 32, 72);
 
     //game.debug.bodyInfo(airplane, 32, 64);
 
